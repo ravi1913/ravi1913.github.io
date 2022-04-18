@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-      .scene-tooltip {
-        padding: 8px;
-        border-radius: 4px;
-        background-color: rgba(0, 0, 0, 0.7);
-      }
-      .scene-tooltip:empty {
-        display: none;
-      }
-    </style>
+  
 </head>
   <body>
     
-    <iframe width="100%" height="828" frameborder="0"
-    src="https://observablehq.com/embed/@ravi1913/coronavirus-covid-19-globe?cells=globePlot%2Cviewof+valMode%2Cviewof+popRel"></iframe>
+    <div id="observablehq-globePlot-55bfa130"></div>
+    <div id="observablehq-heading-55bfa130"></div>
+    <div id="observablehq-datasource-55bfa130"></div>
+    <div id="observablehq-viewof-valMode-55bfa130"></div>
+    <div id="observablehq-viewof-popRel-55bfa130"></div>
+    <div id="observablehq-references-55bfa130"></div>
+    <div id="observablehq-myTooltip-55bfa130"></div>
+    <p>Credit: <a href="https://observablehq.com/@ravi1913/coronavirus-covid-19-globe">Coronavirus (COVID-19) Versus Consumer Price Index (CPI) Globe by Ravi Teja</a></p>
 
+    <script type="module">
+      import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+      import define from "https://api.observablehq.com/@ravi1913/coronavirus-covid-19-globe.js?v=3";
+      new Runtime().module(define, name => {
+        if (name === "globePlot") return new Inspector(document.querySelector("#observablehq-globePlot-55bfa130"));
+        if (name === "heading") return new Inspector(document.querySelector("#observablehq-heading-55bfa130"));
+        if (name === "datasource") return new Inspector(document.querySelector("#observablehq-datasource-55bfa130"));
+        if (name === "viewof valMode") return new Inspector(document.querySelector("#observablehq-viewof-valMode-55bfa130"));
+        if (name === "viewof popRel") return new Inspector(document.querySelector("#observablehq-viewof-popRel-55bfa130"));
+        if (name === "references") return new Inspector(document.querySelector("#observablehq-references-55bfa130"));
+        if (name === "myTooltip") return new Inspector(document.querySelector("#observablehq-myTooltip-55bfa130"));
+        return ["getFeatureVal","plot"].includes(name);
+      });
+    </script>
   </body>
 </html>
